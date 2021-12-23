@@ -1,120 +1,50 @@
+//Kvadrat
 function showResultInDomKvadrat() {
-  const square = resultSquare(squareCalc());
-  document.getElementById("ploschadKvadrata").innerHTML = square;
-}
-
-function squareCalc() {
-  const calc = formulasSquare(elDlinaStoroniKvadrata());
-  return calc;
-}
-
-function elDlinaStoroniKvadrata() {
-  const elSquare = document.getElementById("dlinaStoroniKvadrata").value;
-
-  return elSquare;
-}
-
-function resultSquare(ploschadKvadrata) {
-  return `${ploschadKvadrata}`;
-}
-//end square
-
-//start rectangle
-
-function showResultInDomPriamougolnika() {
-  const rectangle = resultRectangle(rectangleCalc());
-
-  document.getElementById("ploschadPriamougolnika").innerHTML = rectangle;
-}
-
-function rectangleCalc() {
-  const calcRectangle = formulaRectangle(
-    elPervayaStoronaPriamougolnika(),
-    elDrugayaStoronaPriamougolnika()
+  document.getElementById("ploschadKvadrata").innerHTML = formulasSquare(
+    document.getElementById("dlinaStoroniKvadrata").value
   );
-  return calcRectangle;
 }
+//end Kvadrat
 
-function elPervayaStoronaPriamougolnika() {
-  const elOneRectangle = document.getElementById(
+//start Priamougolnik
+function showResultInDomPriamougolnika() {
+  const pervayaStoronaPriamougolnika = document.getElementById(
     "pervayaStoronaPriamougolnika"
   ).value;
-  return elOneRectangle;
-}
-
-function elDrugayaStoronaPriamougolnika() {
-  const elTwoRectangle = document.getElementById(
+  const drugayaStoronaPriamougolnika = document.getElementById(
     "drugayaStoronaPriamougolnika"
   ).value;
-  return elTwoRectangle;
+
+  document.getElementById("ploschadPriamougolnika").innerHTML =
+    formulaRectangle(
+      pervayaStoronaPriamougolnika,
+      drugayaStoronaPriamougolnika
+    );
 }
+//end Priamougolnik
 
-function resultRectangle(ploschadPriamougolnika) {
-  return `${ploschadPriamougolnika}`;
-}
-//end rectangle
-
-//start Parallelogram
-
+//start Paralelogram
 function showResultInDomParalelograma() {
-  const parallelogram = resultParallelogram(parallelogramCalc());
-
-  document.getElementById("ploschadParalelograma").innerHTML = parallelogram;
-}
-
-function parallelogramCalc() {
-  const calcParellelogram = formulaParallelogram(
-    elDlinaStoronyParalelograma(),
-    elDlinaVisotyParalelograma()
-  );
-  return calcParellelogram;
-}
-
-function elDlinaStoronyParalelograma() {
-  const elOneParallelogram = document.getElementById(
+  const dlinaStoronyParalelograma = document.getElementById(
     "dlinaStoronyParalelograma"
   ).value;
-  return elOneParallelogram;
-}
-
-function elDlinaVisotyParalelograma() {
-  const elTwoParallelogram = document.getElementById(
+  const dlinaVisotyParalelograma = document.getElementById(
     "dlinaVisotyParalelograma"
   ).value;
-  return elTwoParallelogram;
+
+  document.getElementById("ploschadParalelograma").innerHTML =
+    formulaParallelogram(dlinaStoronyParalelograma, dlinaVisotyParalelograma);
 }
+//end Paralelogram
 
-function resultParallelogram(ploschadParalelograma) {
-  return `${ploschadParalelograma}`;
-}
-//end Parallelogram
-
-//start Rhombus
-
+// start Rhomb
 function showResultInDomRomba() {
-  const rhombus = resultRhombus(rhombusCalc());
+  const dlinaStoronyRomba = document.getElementById("dlinaStoronyRomba").value;
+  const dlinaVisotyRomba = document.getElementById("dlinaVisotyRomba").value;
 
-  document.getElementById("ploschadRomba").innerHTML = rhombus;
-}
-
-function rhombusCalc() {
-  const calcRhombus = formulaRhombus(
-    elDlinaStoronyRomba(),
-    elDlinaVisotyRomba()
+  document.getElementById("ploschadRomba").innerHTML = formulaRhombus(
+    dlinaStoronyRomba,
+    dlinaVisotyRomba
   );
-  return calcRhombus;
 }
-
-function elDlinaStoronyRomba() {
-  const elOneRhombus = document.getElementById("dlinaStoronyRomba").value;
-  return elOneRhombus;
-}
-
-function elDlinaVisotyRomba() {
-  const elTwoRhombus = document.getElementById("dlinaVisotyRomba").value;
-  return elTwoRhombus;
-}
-
-function resultRhombus(ploschadRomba) {
-  return `${ploschadRomba}`;
-}
+// end Rhomb
