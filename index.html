@@ -63,7 +63,7 @@
                 <form>
                     <input type="number" id="dlinaStoroniKvadrata" name="dlinaStoroniKvadrata"
                         placeholder="Длина стороны">
-                    <button type="button" onclick="showResultInDomKvadrat()">Результат</button>
+                    <button type="button" onclick="window.showResultInDomKvadrat()">Результат</button>
                 </form>
             </td>
             <td id="ploschadKvadrata"></td>
@@ -81,7 +81,7 @@
                         placeholder="Одна сторона">
                     <input type="number" id="drugayaStoronaPriamougolnika" name="drugayaStoronaPriamougolnika"
                         placeholder="Другая сторона">
-                    <button type="button" onclick="showResultInDomPriamougolnika()">Результат</button>
+                    <button type="button" onclick="window.showResultInDomPriamougolnika()">Результат</button>
                 </form>
             </td>
             <td id="ploschadPriamougolnika"></td>
@@ -100,7 +100,7 @@
                         placeholder="Длина стороны">
                     <input type="number" id="dlinaVisotyParalelograma" name="dlinaVisotyParalelograma"
                         placeholder="Длина высоты">
-                    <button type="button" onclick="showResultInDomParalelograma()">Результат</button>
+                    <button type="button" onclick="window.showResultInDomParalelograma()">Результат</button>
                 </form>
             </td>
             <td id="ploschadParalelograma"></td>
@@ -116,14 +116,14 @@
                 <form>
                     <input type="number" id="dlinaStoronyRomba" name="dlinaStoronyRomba" placeholder="Длина стороны">
                     <input type="number" id="dlinaVisotyRomba" name="dlinaVisotyRomba" placeholder="Длина высоты">
-                    <button type="button" onclick="showResultInDomRomba()">Результат</button>
+                    <button type="button" onclick="window.showResultInDomRomba()">Результат</button>
                 </form>
             </td>
             <td id="ploschadRomba"></td>
         </tr>
     </table>
-    <script src="./libraryFormula.js"></script>
-    <script src="./domOperations.js"></script>
+    <script src="./dist/main.js"></script>
+
 </body>
 
 </html>
